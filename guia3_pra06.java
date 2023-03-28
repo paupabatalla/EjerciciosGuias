@@ -24,10 +24,11 @@ public class guia3_pra06 {
     
        Scanner leer = new Scanner(System.in);
        System.out.println("Ingrese el primer número");
-        int num = leer.nextInt();
+        float num = leer.nextInt();
         System.out.println("Ingrese el segundo número");
-        int num1 = leer.nextInt();
+        float num1 = leer.nextInt();
         int opcion;
+        String respuesta = " ";
 
         do {
             System.out.println("Elija una opcion");
@@ -38,38 +39,22 @@ public class guia3_pra06 {
             System.out.println("5. SALIR");
            
             opcion = leer.nextInt();
-            
+  
              switch (opcion) {
-            case 1:
-                int suma = num + num1;
-                System.out.println("La suma de los números ingresados es " + suma);
+            case 1: System.out.println("La suma de los números ingresados es " + (num+num1));
                 break;
-            case 2:
-                int resta = num + num1;
-                System.out.println("La resta de los números ingresados es " + resta);
+            case 2: System.out.println("La resta de los números ingresados es " + (num-num1));
                 break;
-            case 3:
-                int multi = num * num1;
-                System.out.println("La multiplicación entre los números ingresados es " + multi);
+            case 3: System.out.println("La multiplicación entre los números ingresados es " + (num*num1));
                 break;
-            case 4:
-                int divi = num / num1;
-                System.out.println("La división entre los números ingresados es " + divi);
+            case 4: System.out.println("La división entre los números ingresados es " + (num/num1));
                 break;
-            case 5:
-                System.out.println("¿Está seguro que desea salir del programa (S/N)?");
-                String respuesta = leer.nextLine();
-
-                if (respuesta.equalsIgnoreCase("N")) {   
-                    System.out.println("HA DECIDIDO SALIR DEL SISTEMA");
-                    break; 
-      
-                } 
-            }
-
-        } while (opcion>0 && opcion ==5);
-
-
+            case 5: System.out.println("¿Está seguro que desea salir del programa (S/N)?");
+                respuesta = leer.next();
+                 break;    
+                }  
+        } while (!(respuesta.equalsIgnoreCase("S")));
+        
+           System.out.println("HA DECIDIDO SALIR DEL SISTEMA");
     }
-
 }

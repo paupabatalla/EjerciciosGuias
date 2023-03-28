@@ -18,6 +18,30 @@ public class guia3_pra07 {
     public static void main(String[] args) {
     
        Scanner leer = new Scanner(System.in);
-
+          String cadena = "";
+          int correcta = 0;
+          int incorrecta = 0;
+          
+        do {
+            System.out.println("Ingrese una cadena");
+            cadena = leer.nextLine();
+            
+            int longitud = cadena.length();
+            String primera = cadena.substring(0,1);
+            String ultima = cadena.substring(longitud-1,longitud);
+            
+            if (longitud == 5 && primera.equalsIgnoreCase("x") && ultima.equalsIgnoreCase("o")) {
+           correcta++;
+                System.out.println("correcta = " + correcta);
+            } else {
+                incorrecta++;
+                System.out.println("incorrecta = " + incorrecta);   
+            }
+      
+        } while (!(cadena.equalsIgnoreCase("&&&&&")));
+        
+        System.out.println("La cantidad de cadenas correctas ingresadas es " + correcta);
+        System.out.println("La cantidad de cadenas incorrectas ingresadas es " + incorrecta);
+        
     }
 }
