@@ -12,20 +12,15 @@ public class guia3_ex01 {
         System.out.println("Ingrese un tiempo en minutos");
         int min = leer.nextInt();
         
-        float hora = min/60;
-        float dias = 0;
+        int hora = min/60;
+        int dia = hora/24;
         
-        while (hora > 24) {
-            dias = hora/60;
-            System.out.println("DIAS = " + dias);
-            
-            
+        if (hora < 24 && dia == 0) {
+            System.out.println("El equivalente en horas de los minutos ingresados es= " + hora + " horas");
+        } else {
+            hora -= 24;
+         System.out.println("El equivalente en horas y dias de los minutos ingresados es= " + dia + " días, " + hora + " horas");         
         }
-        
-        System.out.println("El equivalente en horas y dias de los minutos ingresados es= " + dias + " días, " + hora + " horas."); 
-                
-       
-
-    }
+        }
 
 }
