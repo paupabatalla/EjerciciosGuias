@@ -20,19 +20,46 @@ public class guia4_ej11 {
        String letra = "";
        String frase = "";
        
-       
-        while (!(frase.equalsIgnoreCase("."))) {
             System.out.println("Ingrese un frase");
             frase = leer.nextLine();
-        }
         
         int  longitud = frase.length();
         System.out.println("frase = " + frase + " y su longitud es de " + longitud);
+       
+        String retorno =codi(letra, frase, longitud);
+        
+        System.out.println("La frase retornada es: " + retorno);
+        
     }
     
     public static String codi (String letra, String frase, int longitud) {
         String codif = "";
         
+        for (int i = 0; i < longitud; i++) {
+            letra = frase.substring(i,i+1);
+            letra = frase.toLowerCase();
+            
+            switch (letra) {
+                case "a":
+                    letra = "@";
+                    break;
+                case "e":
+                    letra = "#";
+                    break;
+                case "i":
+                    letra = "i";
+                    break;
+                case "o":
+                    letra = "%";
+                    break;
+                case "u":
+                    letra = "*";
+                    break;
+                default:
+                    letra = letra;   
+            }
+        }
+       
         
         
         return codif;

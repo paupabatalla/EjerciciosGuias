@@ -10,9 +10,23 @@ este ejercicio investigue como utilizar la función Math.random() de Java.
  */
 public class guia3_ex10 {
     public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
     
-       Scanner leer = new Scanner(System.in);
-
+       int num = (int) (Math.random() * 10);
+       int num1 = (int) (Math.random() * 10);
+       int multi = num * num1;
+        System.out.println(multi);
+       
+       while (true) {
+        System.out.println("Ingrese el resultado de la multiplicación aleatoria");
+        int resultado = leer.nextInt();
+        
+        if (resultado == multi) {
+            System.out.println("RESPUESTA CORRECTA");
+            break;  
+        }
+       }  
+   
     }
 
 }

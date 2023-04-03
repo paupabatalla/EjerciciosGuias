@@ -12,6 +12,22 @@ public class guia3_ex11 {
     public static void main(String[] args) {
     
        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese un numero");
+        int num = leer.nextInt();
+        int contador = 0;
+        
+        while (true) {
+        num /= 10;
+          contador ++;
+          
+          if (num == 0) {
+              break;
+          }
+        }
+        
+        System.out.println("El número ingresado tiene " + contador + " digitos");
+        
+       
 
     }
 

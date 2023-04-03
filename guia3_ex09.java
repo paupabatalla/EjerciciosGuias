@@ -1,5 +1,7 @@
 package ejercicios;
+
 import java.util.Scanner;
+
 /*Consigna
 Simular la división usando solamente restas. Dados dos números enteros
 mayores que uno, realizar un algoritmo que calcule el cociente y el residuo
@@ -14,11 +16,27 @@ dado que 11 es menor que 13, entonces: el residuo es 11 y el cociente es 3.
 ¿Aún no lo entendiste? Recomendamos googlear división con restas sucesivas.
  */
 public class guia3_ex09 {
-    public static void main(String[] args) {
-    
-       Scanner leer = new Scanner(System.in);
-       
 
+    public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese el primer número");
+        int num = leer.nextInt();
+        System.out.println("Ingrese el segundo número");
+        int num1 = leer.nextInt();
+
+        int resta = 0, cociente = 0;
+
+           do {
+            resta = num - num1;
+             System.out.println(num + " - " + num1 + " = " + resta);
+            cociente++;
+            num = resta;       
+            
+           }while (resta >= num1);
+           
+           System.out.println("RESIDUO = " + resta + "; COCIENTE = " + cociente);
+ 
     }
 
 }
