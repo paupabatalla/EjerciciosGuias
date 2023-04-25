@@ -1,5 +1,7 @@
 package ejercicios;
+
 import java.util.Scanner;
+
 /*Consigna
 Diseño una función que pida el nombre y la edad de N personas e imprima
 los datos de las personas ingresadas por teclado e indique si son mayores o 
@@ -9,35 +11,37 @@ ingrese la palabra "no".
  */
 public class guia4_pra02 {
 
-    
     public static void main(String[] args) {
-    
-       Scanner leer = new Scanner(System.in);
-       String respuesta = "", nombre = "", maymen = "";
-       int edad = 0;
-    
-        do {
-            System.out.println("Ingrese un nombre");
-            nombre = leer.nextLine();
-            System.out.println("");
-            System.out.println("Ingrese la edad");
-            edad = leer.nextInt();
-            
-            System.out.println("Es mayor de edad?");
-            
-          if (edad >= 18) {
-                System.out.println("Sí. " + nombre + " es mayor de edad.");
-            }else{
-                System.out.println("No. " + nombre + " no es mayor de edad.");
-            }
 
+        Scanner leer = new Scanner(System.in);
+        String respuesta = "";
+
+        do {
+            nombreEdad(leer);
             System.out.println("Desea ingresar a otra persona? si o no.");
-            respuesta = leer.nextLine();
-            
-            
-            
+            respuesta = leer.next();
+
         } while (!(respuesta.equalsIgnoreCase("no")));
-        
+
+    }
+
+    public static void nombreEdad(Scanner leer) {
+
+        System.out.println("Ingrese un nombre");
+        String nombre = leer.next();
+        System.out.println("Ingrese la edad");
+        int edad = leer.nextInt();
+        System.out.println("Es mayor de edad?");
+        comprobar(edad);
+    }
+
+    public static void comprobar(int edad) {
+
+        if (edad >= 18) {
+            System.out.println("Sí, es mayor de edad.");
+        } else {
+            System.out.println("No, no es mayor de edad.");
+        }
     }
 
 }

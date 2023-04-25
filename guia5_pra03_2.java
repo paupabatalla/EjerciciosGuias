@@ -14,6 +14,7 @@ public class guia5_pra03_2 {
         String [] vector = new String[num];
         int cont1 = 0, cont2 = 0, cont3 = 0, cont4 = 0, cont5 = 0;
         
+        
         for (int i = 0; i < num; i++) {
             System.out.println("Ingrese un valor para vector " + (i+1));
             vector[i] = leer.nextLine();

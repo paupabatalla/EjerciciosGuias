@@ -24,10 +24,19 @@ public class guia5_pra02 {
 
             if (vector[i] == buscar) {
                 contador++;
-                System.out.println("El número se ha encontrado en la posición " + i);
+                System.out.println("El número se ha encontrado en la posición " + i);  
+            }
+            
+            if (contador > 1) {
+                System.out.println("El numero ingresado se encuentra repetido");
+                break;
             }
         }
-        System.out.println("----------------------");
+        
+        if (contador == 0) {
+            System.out.println("EL NUMERO NO SE HA ENCONTRADO");
+            
+        }
         System.out.println("El número ingresado se ha encontrado " + contador + " veces");
     }
 }
